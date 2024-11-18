@@ -2,5 +2,6 @@
 def islower(c):
     if isinstance(c, str) and len(c) == 1:
         return (ord('a') <= ord(c) <= ord('z'))
-    else:
+    elif isinstance(c, ):
         return False
+    
