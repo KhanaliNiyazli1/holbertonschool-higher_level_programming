@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98
-print(f"{number} Battery street")
+for i in range(99):
+    print("{} = 0x{:x}".format(i, i))
