@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for i in range(100):
-    print(f'{i}', end=", " )
+    print(f'{i:02}', end=", " )
