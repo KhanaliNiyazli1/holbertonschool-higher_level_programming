@@ -39,6 +39,7 @@ class Square:
     @position.setter
     def position(self, value):
         """Set the position of the square with validation."""
+        # Validate that position is a tuple of 2 integers
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not all(isinstance(i, int) for i in value) or value[0] < 0 or value[1] < 0:
@@ -52,10 +53,12 @@ class Square:
     def my_print(self):
         """Print the square using '#' characters, with the specified position."""
         if self.__size == 0:
-            print("")
+            print("")  # If size is 0, just print an empty line
         else:
+            # Print the vertical position (number of empty lines before the square starts)
             for _ in range(self.__position[1]):
                 print("")
 
+            # Print the square with horizontal position (spaces before each line of the square)
             for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
