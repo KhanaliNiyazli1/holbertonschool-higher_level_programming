@@ -71,7 +71,7 @@ class Rectangle:
     def area(self):
         """
         Calculates the area of the rectangle.
-        
+
         Returns:
             int: The area of the rectangle (width * height).
         """
@@ -108,4 +108,5 @@ class Rectangle:
         Returns:
             str: The official string representation of the rectangle, including its memory address.
         """
-        return f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>"
+        return (f"<{self.__class__.__module__}.{self.__class__.__name__} "
+                f"object at {hex(id(self))}>")
