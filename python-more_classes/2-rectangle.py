@@ -71,3 +71,16 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
+
+# Test cases
+if __name__ == "__main__":
+    my_rectangle = Rectangle(2, 4)
+    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.area()))  # Expected output: "2 - 4 => 8"
+    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.perimeter()))  # Expected output: "2 - 4 => 12"
+
+    print("--")
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.area()))  # Expected output: "10 - 3 => 30"
+    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.perimeter()))  # Expected output: "10 - 3 => 26"
