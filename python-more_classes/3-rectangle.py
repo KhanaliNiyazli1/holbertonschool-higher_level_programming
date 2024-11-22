@@ -26,7 +26,6 @@ class Rectangle:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
         __str__(): Returns a string representation of the rectangle using '#'.
-        __repr__(): Returns the official string representation of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
@@ -94,7 +93,6 @@ class Rectangle:
         Returns a string representation of the rectangle using '#' characters.
 
         Returns:
-            str: A string representation of the rectangle, or an empty string if
             the rectangle has 0 width or 0 height.
         """
         if self.width == 0 or self.height == 0:
@@ -106,7 +104,6 @@ class Rectangle:
         Returns the official string representation of the rectangle.
 
         Returns:
-            str: The official string representation of the rectangle, including its memory address.
         """
         return (f"<{self.__class__.__module__}.{self.__class__.__name__} "
                 f"object at {hex(id(self))}>")
