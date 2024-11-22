@@ -5,13 +5,13 @@ Module that defines a Rectangle class.
 The Rectangle class represents a rectangle with methods to compute its area
 and perimeter. It also includes property setters and getters for width and
 height, with validation for the values. Additionally, it provides string
-representations of the rectangle and prints a message when an instance is deleted.
 
 Example usage:
     rect = Rectangle(2, 4)
     print(rect.area())        # Outputs the area of the rectangle
     print(rect.perimeter())   # Outputs the perimeter of the rectangle
 """
+
 
 class Rectangle:
     """
@@ -21,12 +21,7 @@ class Rectangle:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
 
-    Methods:
-        area(): Returns the area of the rectangle.
-        perimeter(): Returns the perimeter of the rectangle.
-        __str__(): Returns a string representation of the rectangle using '#'.
-        __repr__(): Returns the official string representation of the rectangle.
-        __del__(): Prints a message when the object is deleted.
+    
     """
 
     def __init__(self, width=0, height=0):
@@ -93,9 +88,6 @@ class Rectangle:
         """
         Returns a string representation of the rectangle using '#' characters.
 
-        Returns:
-            str: A string representation of the rectangle, or an empty string if
-            the rectangle has 0 width or 0 height.
         """
         if self.width == 0 or self.height == 0:
             return ""
@@ -118,4 +110,3 @@ class Rectangle:
         This method is called when the object is deleted.
         """
         print("Bye rectangle...")
-
