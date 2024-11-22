@@ -12,6 +12,7 @@ Example usage:
     print(rect.perimeter())   # Outputs the perimeter of the rectangle
 """
 
+
 class Rectangle:
     """
     A class representing a rectangle.
