@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+"""
+Module that defines a Rectangle class.
+
+The Rectangle class represents a rectangle with methods to compute its area
+and perimeter. It also includes property setters and getters for width and
+height, with validation for the values.
+
+Example usage:
+    rect = Rectangle(2, 4)
+    print(rect.area())        # Outputs the area of the rectangle
+    print(rect.perimeter())   # Outputs the perimeter of the rectangle
+"""
 class Rectangle:
     """
     A class representing a rectangle.
@@ -11,11 +23,11 @@ class Rectangle:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         Initializes a new instance of the Rectangle class.
-        
+
         Args:
             width (int): The width of the rectangle. Defaults to 0.
             height (int): The height of the rectangle. Defaults to 0.
@@ -63,7 +75,7 @@ class Rectangle:
     def perimeter(self):
         """
         Calculates the perimeter of the rectangle.
-        
+
         Returns:
             int: The perimeter of the rectangle (2 * (width + height)).
             If width or height is 0, the perimeter is 0.
@@ -71,16 +83,3 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
-
-# Test cases
-if __name__ == "__main__":
-    my_rectangle = Rectangle(2, 4)
-    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.area()))  # Expected output: "2 - 4 => 8"
-    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.perimeter()))  # Expected output: "2 - 4 => 12"
-
-    print("--")
-
-    my_rectangle.width = 10
-    my_rectangle.height = 3
-    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.area()))  # Expected output: "10 - 3 => 30"
-    print("{} - {} => {}".format(my_rectangle.width, my_rectangle.height, my_rectangle.perimeter()))  # Expected output: "10 - 3 => 26"
