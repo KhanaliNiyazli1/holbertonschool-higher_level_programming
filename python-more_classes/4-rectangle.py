@@ -13,6 +13,7 @@ Example usage:
     print(rect.perimeter())   # Outputs the perimeter of the rectangle
 """
 
+
 class Rectangle:
     """
     A class representing a rectangle.
@@ -25,7 +26,6 @@ class Rectangle:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
         __str__(): Returns a string representation of the rectangle using '#'.
-        __repr__(): Returns the official string representation of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
@@ -69,10 +69,8 @@ class Rectangle:
 
     def area(self):
         """
-        Calculates the area of the rectangle.
-
-        Returns:
-            int: The area of the rectangle (width * height).
+        Calculates the         __repr__(): Returns the official string representation of the rectangle.
+rea of the rectangle (width * height).
         """
         return self.width * self.height
 
@@ -93,7 +91,6 @@ class Rectangle:
         Returns a string representation of the rectangle using '#' characters.
 
         Returns:
-            str: A string representation of the rectangle, or an empty string if
             the rectangle has 0 width or 0 height.
         """
         if self.width == 0 or self.height == 0:
