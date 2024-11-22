@@ -69,8 +69,7 @@ class Rectangle:
 
     def area(self):
         """
-        Calculates the         __repr__(): Returns the official string representation of the rectangle.
-rea of the rectangle (width * height).
+        asda
         """
         return self.width * self.height
 
