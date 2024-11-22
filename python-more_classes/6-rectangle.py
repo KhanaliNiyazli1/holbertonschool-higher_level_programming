@@ -20,7 +20,8 @@ class Rectangle:
     Attributes:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
-
+        number_of_instances (int): The number of Rectangle instances.
+        
     Methods:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
@@ -28,6 +29,9 @@ class Rectangle:
         __repr__(): Returns the official string representation of the rectangle.
         __del__(): Prints a message when the object is deleted.
     """
+
+    # Initialize class attribute to track the number of instances
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -39,6 +43,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1  # Increment the counter for each new instance
 
     @property
     def width(self):
@@ -118,4 +123,4 @@ class Rectangle:
         This method is called when the object is deleted.
         """
         print("Bye rectangle...")
-
+        Rectangle.number_of_instances -= 1  # Decrement the counter when an instance is deleted
