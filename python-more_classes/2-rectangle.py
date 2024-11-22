@@ -11,6 +11,7 @@ Example usage:
     print(rect.area())        # Outputs the area of the rectangle
     print(rect.perimeter())   # Outputs the perimeter of the rectangle
 """
+
 class Rectangle:
     """
     A class representing a rectangle.
@@ -83,3 +84,4 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
+
