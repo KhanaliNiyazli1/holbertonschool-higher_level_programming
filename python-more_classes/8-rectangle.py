@@ -14,8 +14,7 @@ class Rectangle:
         perimeter(): Returns the perimeter of the rectangle.
         __str__(): Returns a string representation of the rectangle using
                    the print_symbol.
-        __repr__(): Returns the official string representation of the
-                    rectangle.
+        __repr__(): Returns the official string representation of the rectangle.
         __del__(): Prints a message when the object is deleted.
     """
 
