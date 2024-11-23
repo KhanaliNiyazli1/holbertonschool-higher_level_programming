@@ -1,10 +1,23 @@
 #!/usr/bin/python3
 """Module for creating rectangle class"""
 
-
 class Rectangle:
-    """Creating rectangle class"""
+    """
+    A class that defines a rectangle with width and height.
 
+    Attributes:
+        number_of_instances (int): The number of instances of Rectangle.
+        print_symbol (str): The symbol used for string representation of a rectangle.
+
+    Methods:
+        area() -> int: Returns the area of the rectangle.
+        perimeter() -> int: Returns the perimeter of the rectangle.
+        __str__() -> str: Returns a string representation of the rectangle.
+        __repr__() -> str: Returns a representation of the rectangle.
+        __del__() -> None: Handles deletion of instances and decreases the count.
+        bigger_or_equal(rect_1, rect_2) -> Rectangle: Compares two rectangles by area.
+    """
+    
     number_of_instances = 0
     print_symbol = "#"
 
@@ -48,13 +61,12 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        else:
-            result = ""
-            for i in range(self.__height):
-                result += self.__width * str(self.print_symbol)
-                if i != self.__height - 1:
-                    result += "\n"
-            return result
+        result = ""
+        for i in range(self.__height):
+            result += self.__width * str(self.print_symbol)
+            if i != self.__height - 1:
+                result += "\n"
+        return result
 
     def __repr__(self):
         return f'Rectangle({self.__width}, {self.__height})'
@@ -71,5 +83,4 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return rect_1
-        else:
-            return rect_2
+        return rect_2
